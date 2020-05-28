@@ -59,7 +59,7 @@ jobs:
     steps:
     - id: set-matrix
       run: echo "::set-output name=matrix::{\"include\":[{\"project\":\"foo\",\"config\":\"Debug\"},{\"project\":\"bar\",\"config\":\"Release\"}]}"
-  build:
+  useGeneratedMatrix:
     needs: generateMatrix
     runs-on: ubuntu-latest
     strategy:
