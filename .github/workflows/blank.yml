@@ -65,4 +65,4 @@ jobs:
     strategy:
       matrix: ${{fromJson(needs.generateMatrix.outputs.matrix)}}
     steps:
-    - run: echo${{ matrix.project }} ${{ matrix.config }}
+    - run: echo ${{ matrix.project }} ${{ matrix.config }}
